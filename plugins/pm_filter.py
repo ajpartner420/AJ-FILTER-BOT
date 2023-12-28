@@ -34,6 +34,8 @@ from database.gfilters_mdb import (
     get_gfilters,
     del_allg
 )
+import os
+req_channel=int(os.environ.get('REQ_CHANNEL', '-1002080361966'))
 import logging
 from urllib.parse import quote_plus
 from util.file_properties import get_name, get_hash, get_media_file_size
@@ -344,6 +346,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
 
     files, offset, total_results = await get_search_results(chat_id, search, offset=0, filter=True)
     if not files:
+        await client.send_message(req_channel, f"#REQUEST_LOGS \n\n**CONTENT NAME:**`{search}` \n**REQUIRED BY:**{message.from_user.first_name} \n**USER ID:**{message.frome_user.id}", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🏹 Mark As Done 🎯", callback_data="close_data")]]))
         await query.answer("🚫 𝗡𝗼 𝗙𝗶𝗹𝗲 𝗪𝗲𝗿𝗲 𝗙𝗼𝘂𝗻𝗱 🚫", show_alert=1)
         return
     temp.GETALL[key] = files
