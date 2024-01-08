@@ -20,7 +20,7 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', '12978935'))
 API_HASH = environ.get('API_HASH', '2b728f6bcba0fce63bdafa6840d5041c')
-BOT_TOKEN = environ.get('BOT_TOKEN', "")
+BOT_TOKEN = environ.get('BOT_TOKEN', "5609604598:AAFdWSF_HQtRkMszYZo2l2h3f1yOu0PTx8c")
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 1800))
@@ -41,8 +41,8 @@ auth_channel = environ.get('AUTH_CHANNEL')
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
-support_chat_id = environ.get('SUPPORT_CHAT_ID', '-1002109638370')
-reqst_channel = environ.get('REQST_CHANNEL_ID', '-1002105471071')
+support_chat_id = environ.get('SUPPORT_CHAT_ID', '-1002081846514')
+reqst_channel = environ.get('REQST_CHANNEL_ID', '-1002080361966')
 REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_channel) else None
 SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(support_chat_id) else None
 NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", False))
@@ -54,20 +54,20 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
 VERIFY = bool(environ.get('VERIFY', False))
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'urlspay.in')
-SHORTLINK_API = environ.get('SHORTLINK_API', '9377cea0c85df06c439767f9bf8bc69f0836279f')
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'linkshortify.com')
+SHORTLINK_API = environ.get('SHORTLINK_API', 'fc20aaa21af047255b29c828fd39c5005522146a')
 IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', True))
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
 MAX_B_TN = environ.get("MAX_B_TN", "5")
 MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
 PORT = environ.get("PORT", "8080")
-GRP_LNK = environ.get('GRP_LNK', 'https://t.me/MOVIE_REQUEST_GROUP_AJ')
+GRP_LNK = environ.get('GRP_LNK', 'https://t.me/Aj_Movie_Search_Group')
 CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/aj_moviebook')
 TUTORIAL = environ.get('TUTORIAL', 'https://t.me/+q3FAzjyXMDo1ZDhl')
 IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
 MSG_ALRT = environ.get('MSG_ALRT', 'Hello My Dear Friends ❤️')
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002105471071'))
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'MOVIE_REQUEST_GROUP_AJ')
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'Aj_Support_Group')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
 IMDB = is_enabled((environ.get('IMDB', "True")), True)
 AUTO_FFILTER = is_enabled((environ.get('AUTO_FFILTER', "True")), True)
